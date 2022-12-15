@@ -1,0 +1,49 @@
+{
+    "data_config": {
+        "name": "mouse",
+        "compute_svd" : 5, 
+        "data_dir" : "datasets/mouse/data",
+        "train_name" : "mabe_unlabeled_train.npz", 
+        "val_name" : "mabe_unlabeled_val.npz",
+        "test_name" : "mabe_labeled_test.npz",
+        "normalize_data": true,
+        "batch_size": 256          
+    },
+    "model_config": {
+        "name": "prog_tvae_info",
+        "z_dim": 8,
+        "z_prog_dim": 1,
+        "z_prog_type": "discrete",
+        "h_dim": 256,
+        "rnn_dim": 256,
+        "num_layers": 1,
+        "adv_h_dim": 8,
+        "adv_loss_coeff": 100.0,
+        "num_advs" : 1,
+        "style_con_coeff": 0.0,                        
+        "disc_capacity": [0.0, 0.69, 30000, 100.0],
+        "cont_capacity": [0.0, 10.0, 30000, 100.0]          
+    },
+    "train_config": {
+        "learning_rate": 0.0001,
+        "num_epochs_init": 30,
+        "num_epochs_iter": 30,        
+        "clip": 10.0,
+        "max_progs" : 1, 
+        "reinit_decoder": true,       
+        "near_config": {
+            "dsl_module": "datasets.mouse.dsl",    
+            "normalize_data": false,                    
+            "lr": 0.001,
+            "symbolic_epochs": 10,
+            "neural_epochs": 6,
+            "max_num_units": 10,
+            "min_num_units": 4,
+            "max_num_children": 4,
+            "max_depth": 5,
+            "penalty": 0.01,
+            "frontier_capacity": 8
+        }
+    }
+
+}

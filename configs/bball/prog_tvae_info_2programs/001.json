@@ -1,0 +1,44 @@
+{
+    "data_config": {
+        "name": "bball",
+        "val_split": 0.15,
+        "batch_size": 128
+    },
+    "model_config": {
+        "name": "prog_tvae_info",
+        "z_dim": 8,
+        "z_prog_dim": 1,
+        "z_prog_type": "discrete",
+        "h_dim": 128,
+        "rnn_dim": 128,
+        "num_layers": 1,
+        "decoder_type": "rnn",
+        "adv_h_dim": 8,
+        "adv_loss_coeff": 10.0,
+        "adv_lr_scale": 1.0,
+        "num_advs" : 2,
+        "progs_lr_scale": 10.0,
+        "disc_capacity": [0.0, 0.6, 20000, 10.0],
+        "cont_capacity": [0.0, 4.0, 20000, 10.0]
+    },
+    "train_config": {
+        "learning_rate": 0.002,
+        "num_epochs_init": 20,
+        "num_epochs_iter": 20,
+        "clip": 10,
+        "max_progs" : 2,
+        "near_config": {
+            "dsl_module": "datasets.bball.dsl",
+            "normalize_data": false,
+            "lr": 0.01,
+            "symbolic_epochs": 8,
+            "neural_epochs": 8,
+            "max_num_units": 12,
+            "min_num_units": 4,
+            "max_num_children": 4,
+            "max_depth": 3,
+            "penalty": 0.01,
+            "frontier_capacity": 30
+        }
+    }
+}

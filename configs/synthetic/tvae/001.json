@@ -1,0 +1,21 @@
+{
+    "data_config": {
+        "name": "synthetic",
+        "class1_dist": 0.5,
+        "batch_size": 32
+    },
+    "model_config": {
+        "name": "tvae",
+        "z_dim": 4,
+        "h_dim": 16,
+        "rnn_dim": 16,
+        "num_layers": 1,
+        "decoder_type": "linear"
+    },
+    "train_config": {
+        "learning_rate": 0.0002,
+        "num_epochs_init": 50,
+        "num_epochs_iter": 50,
+        "clip": 10
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "data_config": {
+        "name": "synthetic",
+        "class1_dist": 0.5,
+        "batch_size": 32
+    },
+    "model_config": {
+        "name": "prog_tvae_info",
+        "z_dim": 4,
+        "z_prog_dim": 1,
+        "z_prog_type": "discrete",
+        "h_dim": 16,
+        "rnn_dim": 16,
+        "num_layers": 1,
+        "decoder_type": "linear",
+        "adv_h_dim": 8,
+        "adv_loss_coeff": 10.0,
+        "adv_lr_scale": 1.0,
+        "num_advs" : 2,
+        "progs_lr_scale": 10.0,
+        "disc_capacity": [0.0, 0.6, 10000, 10.0]
+    },
+    "train_config": {
+        "learning_rate": 0.0002,
+        "num_epochs_init": 1,
+        "num_epochs_iter": 1,
+        "clip": 10,
+        "max_progs" : 2,
+        "near_config": {
+            "dsl_module": "datasets.synthetic.dsl",
+            "normalize_data": false,
+            "lr": 0.001,
+            "symbolic_epochs": 1,
+            "neural_epochs": 1,
+            "max_num_units": 16,
+            "min_num_units": 8,
+            "max_num_children": 4,
+            "max_depth": 2,
+            "penalty": 0.01,
+            "frontier_capacity": 16
+        }
+    }
+}

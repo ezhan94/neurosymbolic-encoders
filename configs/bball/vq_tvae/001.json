@@ -1,0 +1,22 @@
+{
+    "data_config": {
+        "name": "bball",
+        "val_split": 0.15,
+        "batch_size": 128
+    },
+    "model_config": {
+        "name": "vq_tvae",
+        "z_dim": 8,
+        "h_dim": 128,
+        "rnn_dim": 128,
+        "num_embeddings": 2,
+        "num_layers": 1,
+        "beta": 0.1
+    },
+    "train_config": {
+        "learning_rate": 0.002,
+        "num_epochs_init": 100,
+        "num_epochs_iter": 100,
+        "clip": 10
+    }
+}

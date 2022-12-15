@@ -1,0 +1,26 @@
+{
+    "data_config": {
+        "name": "bball",
+        "val_split": 0.15,
+        "batch_size": 128
+    },
+    "model_config": {
+        "name": "prog_tvae",
+        "z_dim": 8,
+        "z_prog_dim": 1,
+        "z_prog_type": "discrete",
+        "h_dim": 128,
+        "rnn_dim": 128,
+        "num_layers": 1,
+        "decoder_type": "rnn",
+        "progs_lr_scale": 10.0,
+        "disc_capacity": [0.0, 0.6, 20000, 10.0],
+        "cont_capacity": [0.0, 4.0, 20000, 10.0]
+    },
+    "train_config": {
+        "learning_rate": 0.002,
+        "num_epochs_init": 25,
+        "num_epochs_iter": 25,
+        "clip": 10
+    }
+}
