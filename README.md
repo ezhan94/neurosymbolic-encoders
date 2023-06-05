@@ -40,7 +40,7 @@ We also introduce and change DSL library functions in `near/dsl/`.
 
 - CalMS21 (mouse) - the processed dataset can be downloaded at the following anonymized Google Drive [link](https://drive.google.com/drive/folders/10FUiGlaQjjjZELelgYXU0aT9ha2fN78s?usp=sharing)
 
-- Basketball - the dataset can be downloaded for free [here](https://aws.amazon.com/marketplace/pp/prodview-7kigo63d3iln2?qid=1606330770194&sr=0-1&ref_=srh_res_product_title#offers)
+- Basketball - the dataset can be downloaded for free [here](https://drive.google.com/drive/folders/1or9dqZFu8_5nboc_YRzz2PWbqpyGSs-N?usp=sharing)
 
 ## Adding a New Dataset
 
